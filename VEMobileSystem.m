@@ -7,6 +7,8 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
+NSString * const kVEMobileSystemUUIDKey = @"VE_MobileSystem_UUID";
+
 @implementation VEMobileSystem
 
 - (NSString *) platform

@@ -5,7 +5,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kVEMobileSystemUUIDKey @"VE_MobileSystem_UUID"
+extern NSString * const kVEMobileSystemUUIDKey;
 
 @interface VEMobileSystem : NSObject
 @property (nonatomic, readonly) NSString *platform;
