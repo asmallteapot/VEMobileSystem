@@ -3,13 +3,13 @@
 //  https://github.com/abrahamvegh/VEMobileSystem
 //
 
-#import "VEMobileSystem.h"
+#import "UIDevice+VEMobileSystem.h"
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
 NSString * const kVEMobileSystemUUIDKey = @"VE_MobileSystem_UUID";
 
-@implementation VEMobileSystem
+@implementation UIDevice (VEMobileSystem)
 
 - (NSString *) platform
 {
@@ -30,10 +30,10 @@ NSString * const kVEMobileSystemUUIDKey = @"VE_MobileSystem_UUID";
 
 - (NSString *) version
 {
-	return UIDevice.currentDevice.systemVersion;
+	return self.systemVersion;
 }
 
-- (NSString *) uuid
+- (NSString *) anonymousUniqueIdentifier
 {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
