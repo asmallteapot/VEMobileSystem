@@ -10,7 +10,7 @@
 NSString * const kVEMobileSystemUUIDKey = @"VE_MobileSystem_UUID";
 
 @implementation UIDevice (VEMobileSystem)
-- (NSString *) platform {
+- (NSString *)platform {
 	size_t size;
 	sysctlbyname("hw.machine", NULL, &size, NULL, 0);
 
@@ -24,7 +24,7 @@ NSString * const kVEMobileSystemUUIDKey = @"VE_MobileSystem_UUID";
 }
 
 
-- (NSString *)anonymousUniqueIdentifier {
+- (NSString *)anonymousIdentifier {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
 	if ([defaults objectForKey:kVEMobileSystemUUIDKey] == nil) {
