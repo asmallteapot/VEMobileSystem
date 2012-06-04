@@ -35,9 +35,9 @@ NSString * const kVEMobileSystemUUIDKey = @"VE_MobileSystem_UUID";
 
 - (NSString *) uuid
 {
-	NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
-	if ([d objectForKey: kVEMobileSystemUUIDKey] == nil)
+	if ([defaults objectForKey: kVEMobileSystemUUIDKey] == nil)
 	{
 		NSString *uuidString = nil;
 		CFUUIDRef uuid = CFUUIDCreate(NULL);
@@ -49,11 +49,11 @@ NSString * const kVEMobileSystemUUIDKey = @"VE_MobileSystem_UUID";
 			CFRelease(uuid);
 		}
 
-		[d setObject: uuidString forKey: kVEMobileSystemUUIDKey];
-		[d synchronize];
+		[defaults setObject: uuidString forKey: kVEMobileSystemUUIDKey];
+		[defaults synchronize];
 	}
 
-	return [d stringForKey: kVEMobileSystemUUIDKey];
+	return [defaults stringForKey: kVEMobileSystemUUIDKey];
 }
 
 @end
