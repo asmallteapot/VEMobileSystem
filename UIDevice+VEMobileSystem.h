@@ -9,7 +9,6 @@ extern NSString * const kVEMobileSystemUUIDKey;
 
 @interface UIDevice (VEMobileSystem)
 @property (nonatomic, readonly) NSString *platform;
-@property (nonatomic, readonly) NSString *version;
 @property (nonatomic, readonly) NSString *uuid;
 @end
 

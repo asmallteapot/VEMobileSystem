@@ -28,11 +28,6 @@ NSString * const kVEMobileSystemUUIDKey = @"VE_MobileSystem_UUID";
 	return _platform;
 }
 
-- (NSString *) version
-{
-	return self.systemVersion;
-}
-
 - (NSString *) anonymousUniqueIdentifier
 {
 	NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
